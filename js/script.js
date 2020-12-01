@@ -32,6 +32,8 @@ var app = new Vue({
     filterDisco: function (disco) {
       if (disco.genre.toLowerCase().includes(this.selected.toLowerCase())) {
         return true;
+      } else if (this.selected === "tutti") {
+        return true;
       } else {
         return false;
       }

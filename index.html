@@ -19,6 +19,7 @@
     <div id="app">
       <!-- filtro select per genere -->
       <select name="select by genre" id="filter" v-model="selected">
+        <option value="">tutti</option>
         <option>metal</option>
         <option>rock</option>
         <option>pop</option>
@@ -31,7 +32,7 @@
         class="dischi"
         v-for="(dischi, index) in arrayDischi"
         :key="dischi"
-        v-if="filterDisco(dischi)"
+        v-show="filterDisco(dischi)"
       >
         <img :src="dischi.poster" alt="" />
         <h4>{{dischi.title}}</h4>
