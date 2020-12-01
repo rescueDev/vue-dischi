@@ -4,21 +4,28 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 img {
   max-width: 100%;
   height: 80px;
 }
 
 select {
-  height: 30px;
+  height: 20px;
   text-align: center;
   width: 100%;
+  background-color: slategray;
+  margin-bottom: 40px;
 }
 
 #app {
   border: 1px solid black;
-  width: 800px;
-
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.507);
   margin: 5% auto;
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +33,8 @@ select {
 }
 
 .dischi {
-  width: calc(800px / 5);
+  width: calc(900px / 5);
   margin: 15px 0;
   text-align: center;
+  padding: 10px;
 }
