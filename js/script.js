@@ -18,6 +18,8 @@ var app = new Vue({
   data: {
     arrayDischi: "",
     selected: "",
+    logo:
+      "http://www.resetfestival.it/wp-content/uploads/2017/07/spotify-logo-big-test-800x400.jpg",
   },
   mounted: function () {
     axios.get(musicArray).then((response) => {

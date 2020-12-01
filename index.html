@@ -17,9 +17,10 @@
   </head>
   <body>
     <div id="app">
+      <img id="logo" :src="logo" alt="" />
       <!-- filtro select per genere -->
       <select name="select by genre" id="filter" v-model="selected">
-        <option value="">tutti</option>
+        <option>tutti</option>
         <option>metal</option>
         <option>rock</option>
         <option>pop</option>
