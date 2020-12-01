@@ -17,7 +17,22 @@
   </head>
   <body>
     <div id="app">
-      <div class="dischi" v-for="(dischi, index) in arrayDischi" :key="dischi">
+      <!-- filtro select per genere -->
+      <select name="select by genre" id="filter" v-model="selected">
+        <option>metal</option>
+        <option>rock</option>
+        <option>pop</option>
+        <option>jazz</option>
+      </select>
+
+      <!-- dischi che ciclano con v-for -->
+
+      <div
+        class="dischi"
+        v-for="(dischi, index) in arrayDischi"
+        :key="dischi"
+        v-if="filterDisco(dischi)"
+      >
         <img :src="dischi.poster" alt="" />
         <h4>{{dischi.title}}</h4>
         <h5>{{dischi.author}}</h5>

@@ -17,6 +17,7 @@ var app = new Vue({
   el: "#app",
   data: {
     arrayDischi: "",
+    selected: "",
   },
   mounted: function () {
     axios.get(musicArray).then((response) => {
@@ -26,5 +27,14 @@ var app = new Vue({
       this.arrayDischi = [...risposta];
       console.log(this.arrayDischi);
     });
+  },
+  methods: {
+    filterDisco: function (disco) {
+      if (disco.genre.toLowerCase().includes(this.selected.toLowerCase())) {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
 });

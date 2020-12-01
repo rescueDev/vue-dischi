@@ -9,6 +9,11 @@ img {
   height: 80px;
 }
 
+select {
+  height: 30px;
+  text-align: center;
+}
+
 #app {
   border: 1px solid black;
   width: 800px;
