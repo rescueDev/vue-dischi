@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Cdn Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"
+      integrity="sha512-bYkaBWaFtfPIMYt9+CX/4DWgfrjcHinjerNYxQmQx1VM76eUsPPKZa5zWV8KksVkBF/DaHSADCwil2J5Uq2ctA=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Cdn VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Vue Dischi</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dischi" v-for="(dischi, index) in arrayDischi" :key="dischi">
+        <img :src="dischi.poster" alt="" />
+        <h4>{{dischi.title}}</h4>
+        <h5>{{dischi.author}}</h5>
+        <h5>{{dischi.genre}}</h5>
+        <h5>{{dischi.year}}</h5>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
